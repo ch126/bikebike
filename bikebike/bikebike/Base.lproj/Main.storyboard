@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-st-YGz"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-yU-My9">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-Th-ohY">
+                                        <state key="normal" title="定位"/>
+                                        <connections>
+                                            <action selector="positionBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vUh-za-Y7E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-1w-r9n">
+                                        <state key="normal" title="搜尋"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-Ee-AIQ">
+                                        <state key="normal" title="捷運"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-Cl-rN5">
+                                        <state key="normal" title="Filter"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7pi-st-YGz" secondAttribute="trailing" id="5V2-x3-kbM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IXh-yU-My9" secondAttribute="bottom" id="8Dy-NL-fLw"/>
+                            <constraint firstItem="IXh-yU-My9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9hj-9Z-h8D"/>
+                            <constraint firstAttribute="trailing" secondItem="IXh-yU-My9" secondAttribute="trailing" id="RZd-6X-pGx"/>
+                            <constraint firstItem="IXh-yU-My9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="b81-LS-1fc"/>
+                            <constraint firstItem="7pi-st-YGz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dhd-PG-GiF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7pi-st-YGz" secondAttribute="bottom" id="hbR-3m-uIp"/>
+                            <constraint firstItem="7pi-st-YGz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xjy-WJ-aOu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="7pi-st-YGz" id="JCu-Jh-h9U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
